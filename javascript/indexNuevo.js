@@ -49,7 +49,12 @@ function general(){
             if(esCliente.toLowerCase() == "no"){
                 let dniSolicitante = prompt("Ingrese su dni sin puntos");
                 let existeElCliente = clientes.find((x)=> x.dni == dniSolicitante);
-                console.log(existeElCliente);
+                if(existeElCliente !== undefined){
+                    alert(`Bienvenid@ ${existeElCliente.nombre}`);
+                }else{
+                    alert("Ups, usted no figura en nuestra base de datos");
+                    esCliente = "si";
+                };
 
             }else if(esCliente.toLowerCase() == "si" || esCliente.toLowerCase == "sí"){
                 let nombre = prompt("Ingrese su nombre");
