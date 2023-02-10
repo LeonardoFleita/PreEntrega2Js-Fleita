@@ -103,7 +103,7 @@ function seleccionarProducto(arrayDeBusqueda, arrayDePusheo){
         alert("Ha ingresado una opción errónea");
         seleccionarProducto(arrayDeBusqueda, arrayDePusheo);
     }else{
-        cantidad = parseInt(prompt("Escriba el número de la cantidad que desea ordenar"));
+        cantidad = parseInt(prompt("Escriba la cantidad (numero) que desea ordenar"));
         const productoAgregado = new productoEnCarrito(productoEncontrado.nombre, productoEncontrado.precio, cantidad);
         arrayDePusheo.push(productoAgregado);
     };     
